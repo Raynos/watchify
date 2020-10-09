@@ -6,10 +6,10 @@
   "bin": "bin/cmd.js",
   "dependencies": {
     "anymatch": "^2.0.0",
-    "browserify": "^16.1.0",
     "chokidar": "^2.1.1",
     "defined": "^1.0.0",
     "outpipe": "^1.1.0",
+    "raynos-browserify": "16.5.2-raynos-1",
     "through2": "^2.0.0",
     "xtend": "^4.0.0"
   },

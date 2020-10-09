@@ -1,4 +1,4 @@
-var fromArgs = require('browserify/bin/args');
+var fromArgs = require('raynos-browserify/bin/args');
 var watchify = require('../');
 var defined = require('defined');
 var xtend = require('xtend');

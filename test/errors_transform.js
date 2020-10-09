@@ -1,6 +1,6 @@
 var test = require('tape');
 var watchify = require('../');
-var browserify = require('browserify');
+var browserify = require('raynos-browserify');
 var vm = require('vm');
 
 var fs = require('fs');

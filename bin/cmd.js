@@ -14,8 +14,8 @@ if (w.argv.version) {
     console.error('watchify v' + require('../package.json').version +
         ' (in ' + path.resolve(__dirname, '..') + ')'
     );
-    console.error('browserify v' + require('browserify/package.json').version +
-        ' (in ' + path.dirname(require.resolve('browserify')) + ')'
+    console.error('browserify v' + require('raynos-browserify/package.json').version +
+        ' (in ' + path.dirname(require.resolve('raynos-browserify')) + ')'
     );
     return;
 }
@@ -36,13 +36,13 @@ function bundle () {
     var didError = false;
     var writer = through();
     var wb = w.bundle();
-    
+
     w.pipeline.get('pack').once('readable', function() {
         if (!didError) {
             wb.pipe(writer);
         }
     });
-    
+
     wb.on('error', function (err) {
         console.error(String(err));
         if (!didError) {
@@ -50,7 +50,7 @@ function bundle () {
             writer.end('console.error(' + JSON.stringify(String(err)) + ');');
         }
     });
-    
+
     writer.once('readable', function() {
         var outStream = outpipe(outfile);
         outStream.on('error', function (err) {
