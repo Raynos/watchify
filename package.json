@@ -1,5 +1,5 @@
 {
-  "name": "watchify",
+  "name": "raynos-watchify",
   "version": "3.11.1",
   "description": "watch mode for browserify builds",
   "main": "index.js",
